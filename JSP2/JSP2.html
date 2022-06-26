@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CLOCK</title>
+    <link rel="stylesheet" href="D:\STUDY MATERIAL\Web_Developement\JAVASCRIPT\JSP2\index2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Sacramento&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+<div class="jtron">
+
+<div class="c1">
+  <h1 class="title"> DIGITAL CLOCK </h1>
+  </div>
+
+<div id="clock" class="c2">
+  <script type="text/javascript">
+    setInterval(displayclock,1000) ;
+    function displayclock()
+    {
+      var time = new Date();
+      var hrs = time.getHours() ;
+      var min = time.getMinutes();
+      var sec = time.getSeconds();
+var en = 'AM' ;
+
+if (hrs>12) {
+
+  en = 'PM'
+
+}
+      if (hrs>12) {
+        hrs = hrs-12 ;
+      }
+
+      if (hrs==0) {
+        hrs=12 ;
+      }
+
+if (hrs<10) {
+  hrs = '0'+hrs;
+}
+
+if (min<10) {
+  min = '0'+min;
+}
+
+if (sec<10) {
+  sec = '0'+sec;
+}
+
+      document.getElementById('clock').innerHTML=hrs + ' : ' + min + ' : ' + sec + '   ' + en ;
+
+    }
+
+  </script>
+
+</div>
+
+</div>
+
+  </body>
+</html>
